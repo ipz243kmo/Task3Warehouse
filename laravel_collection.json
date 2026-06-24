@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Warehouse API - Laravel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/api/products"
+      }
+    },
+    {
+      "name": "Add Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Monitor LG 24\",\n    \"sku\": \"WH-MON-09\",\n    \"quantity\": 20,\n    \"price\": 199.99\n}"
+        },
+        "url": "http://127.0.0.1:8000/api/products"
+      }
+    },
+    {
+      "name": "Update Product (Partial)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantity\": 25,\n    \"price\": 185.00\n}"
+        },
+        "url": "http://127.0.0.1:8000/api/products/1"
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:8000/api/products/1"
+      }
+    }
+  ]
+}

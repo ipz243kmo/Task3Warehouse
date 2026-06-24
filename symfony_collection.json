@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Warehouse API - Symfony",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8001/api/warehouse/products"
+      }
+    },
+    {
+      "name": "Add Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"SSD Kingstone 1TB\",\n    \"sku\": \"WH-SSD-44\",\n    \"quantity\": 50,\n    \"price\": 65.00\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/warehouse/products"
+      }
+    },
+    {
+      "name": "Update Product (Partial)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantity\": 48\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/warehouse/products/1"
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:8001/api/warehouse/products/1"
+      }
+    }
+  ]
+}
