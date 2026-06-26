@@ -9,7 +9,15 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://127.0.0.1:8000/api/products"
+        "url": "http://127.0.0.1:8001/api/products"
+      }
+    },
+    {
+      "name": "Get Single Product (Get Item)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8001/api/products/1"
       }
     },
     {
@@ -23,7 +31,7 @@
           "mode": "raw",
           "raw": "{\n    \"title\": \"Monitor LG 24\",\n    \"sku\": \"WH-MON-09\",\n    \"quantity\": 20,\n    \"price\": 199.99\n}"
         },
-        "url": "http://127.0.0.1:8000/api/products"
+        "url": "http://127.0.0.1:8001/api/products"
       }
     },
     {
@@ -37,14 +45,14 @@
           "mode": "raw",
           "raw": "{\n    \"quantity\": 25,\n    \"price\": 185.00\n}"
         },
-        "url": "http://127.0.0.1:8000/api/products/1"
+        "url": "http://127.0.0.1:8001/api/products/1"
       }
     },
     {
       "name": "Delete Product",
       "request": {
         "method": "DELETE",
-        "url": "http://127.0.0.1:8000/api/products/1"
+        "url": "http://127.0.0.1:8001/api/products/1"
       }
     }
   ]
