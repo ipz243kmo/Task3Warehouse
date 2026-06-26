@@ -46,7 +46,16 @@ class WarehouseController extends AbstractController
             'product' => $newProduct
         ], 201);
     }
+public function show(int $id): JsonResponse
+    {
+        foreach ($this->products as $product) {
+            if ($product['id'] === $id) {
+                return $this->json($product, 200);
+            }
+        }
 
+        return $this->json(['error' => 'Product not found in Symfony Warehouse'], 404);
+    }
     #[Route('/products/{id}', name: 'update', methods: ['PATCH'])]
     public function update(int $id, Request $request): JsonResponse
     {
