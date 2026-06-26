@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class WarehouseController extends Controller
 {
-
     private static $products = [
         ['id' => 1, 'title' => 'Laptop ASUS', 'sku' => 'WH-LAP-01', 'quantity' => 15, 'price' => 1200.00],
         ['id' => 2, 'title' => 'Wireless Mouse', 'sku' => 'WH-MOU-05', 'quantity' => 120, 'price' => 25.50],
@@ -38,8 +37,9 @@ class WarehouseController extends Controller
         return response()->json([
             'message' => 'Product successfully added to Warehouse',
             'product' => $newProduct
-        ], 21);
-    
+        ], 201);
+    }
+
     public function show($id)
     {
         foreach (self::$products as $product) {
@@ -50,6 +50,7 @@ class WarehouseController extends Controller
 
         return response()->json(['error' => 'Product not found in Laravel Warehouse'], 404);
     }
+
     public function update(Request $request, $id)
     {
         $productFound = null;
