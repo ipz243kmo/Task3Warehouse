@@ -9,7 +9,15 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://127.0.0.1:8001/api/warehouse/products"
+        "url": "http://127.0.0.1:8000/api/warehouse/products"
+      }
+    },
+    {
+      "name": "Get Single Product (Get Item)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/api/warehouse/products/1"
       }
     },
     {
@@ -23,7 +31,7 @@
           "mode": "raw",
           "raw": "{\n    \"title\": \"SSD Kingstone 1TB\",\n    \"sku\": \"WH-SSD-44\",\n    \"quantity\": 50,\n    \"price\": 65.00\n}"
         },
-        "url": "http://127.0.0.1:8001/api/warehouse/products"
+        "url": "http://127.0.0.1:8000/api/warehouse/products"
       }
     },
     {
@@ -37,14 +45,14 @@
           "mode": "raw",
           "raw": "{\n    \"quantity\": 48\n}"
         },
-        "url": "http://127.0.0.1:8001/api/warehouse/products/1"
+        "url": "http://127.0.0.1:8000/api/warehouse/products/1"
       }
     },
     {
       "name": "Delete Product",
       "request": {
         "method": "DELETE",
-        "url": "http://127.0.0.1:8001/api/warehouse/products/1"
+        "url": "http://127.0.0.1:8000/api/warehouse/products/1"
       }
     }
   ]
